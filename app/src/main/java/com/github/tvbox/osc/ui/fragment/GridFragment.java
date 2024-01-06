@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.GsonUtils;
+import com.blankj.utilcode.util.LogUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.github.tvbox.osc.R;
 import com.github.tvbox.osc.api.ApiConfig;
@@ -83,9 +84,9 @@ public class GridFragment extends BaseLazyFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            String json = savedInstanceState.getString("sortDataJson");
-            this.sortData = GsonUtils.fromJson(json, MovieSort.SortData.class);
+        if (savedInstanceState != null && this.sortData == null) {
+            //activity销毁再进入,会直接恢复fragment,从而直接getList,导致sortData为空闪退
+            this.sortData = GsonUtils.fromJson(savedInstanceState.getString("sortDataJson"), MovieSort.SortData.class);
         }
     }
 
@@ -280,6 +281,10 @@ public class GridFragment extends BaseLazyFragment {
     }
 
     private void initData() {
+        if (ApiConfig.get().getHomeSourceBean().getApi()==null){// 系统杀死app恢复缓存的fragment后会直接getList,此时首页api都未加载完
+            showEmpty();
+            return;
+        }
         showLoading();
         isLoad = false;
         scrollTop();
