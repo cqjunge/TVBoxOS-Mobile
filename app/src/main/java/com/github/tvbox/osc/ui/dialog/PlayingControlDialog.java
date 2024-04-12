@@ -68,6 +68,16 @@ public class PlayingControlDialog extends BottomPopupView {
         mBinding.scale.setOnClickListener(view -> changeAndUpdateText(mBinding.scale,mController.mPlayerScaleBtn));
         mBinding.playTimeStart.setOnClickListener(view -> changeAndUpdateText(mBinding.playTimeStart,mController.mPlayerTimeStartBtn));
         mBinding.playTimeEnd.setOnClickListener(view -> changeAndUpdateText(mBinding.playTimeEnd,mController.mPlayerTimeSkipBtn));
+        mBinding.playTimeStart.setOnLongClickListener(view -> {
+            mController.mPlayerTimeStartBtn.performLongClick();
+            mBinding.playTimeStart.setText(mController.mPlayerTimeStartBtn.getText());
+            return true;
+        });
+        mBinding.playTimeEnd.setOnLongClickListener(view -> {
+            mController.mPlayerTimeSkipBtn.performLongClick();
+            mBinding.playTimeEnd.setText(mController.mPlayerTimeSkipBtn.getText());
+            return true;
+        });
         mBinding.increaseStart.setOnClickListener(view -> {
             mController.increaseTime("st");
             updateSkipText(true);
@@ -94,10 +104,6 @@ public class PlayingControlDialog extends BottomPopupView {
         mBinding.subtitle.setOnClickListener(view -> dismissWith(() -> changeAndUpdateText(null,mController.mZimuBtn)));
         mBinding.voice.setOnClickListener(view -> dismissWith(() -> changeAndUpdateText(null,mController.mAudioTrackBtn)));
         mBinding.download.setOnClickListener(view -> dismissWith(mDetailActivity::use1DMDownload));
-        mBinding.subtitle.setOnLongClickListener(view -> {
-            mController.hideSubtitle();
-            return true;
-        });
     }
 
     private void updateSkipText(boolean start){
@@ -145,7 +151,6 @@ public class PlayingControlDialog extends BottomPopupView {
      */
     public void updateAboutIjkVisible(){
         mBinding.decode.setVisibility(mController.mPlayerIJKBtn.getVisibility());
-        mBinding.voice.setVisibility(mController.mAudioTrackBtn.getVisibility());
     }
 
     /**
