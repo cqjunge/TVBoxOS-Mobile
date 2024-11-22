@@ -46,7 +46,7 @@
                         android:background="@drawable/bg_r_common_stroke_primary"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:textColor="@color/text_gray"
+                        android:textColor="@color/text_foreground"
                         android:paddingVertical="4dp"
                         android:paddingHorizontal="10dp"
                         android:text="x0.5" />
@@ -59,10 +59,23 @@
                         android:background="@drawable/bg_r_common_stroke_primary"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:textColor="@color/text_gray"
+                        android:textColor="@color/text_foreground"
                         android:paddingVertical="4dp"
                         android:paddingHorizontal="10dp"
                         android:text="x1.0" />
+
+                    <TextView
+                        android:id="@+id/speed1a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_r_common_stroke_primary"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/text_foreground"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="x1.25" />
 
                     <TextView
                         android:id="@+id/speed2"
@@ -75,7 +88,7 @@
                         android:paddingVertical="4dp"
                         android:singleLine="true"
                         android:text="x1.5"
-                        android:textColor="@color/text_gray" />
+                        android:textColor="@color/text_foreground" />
 
                     <TextView
                         android:id="@+id/speed3"
@@ -85,7 +98,7 @@
                         android:background="@drawable/bg_r_common_stroke_primary"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:textColor="@color/text_gray"
+                        android:textColor="@color/text_foreground"
                         android:paddingVertical="4dp"
                         android:paddingHorizontal="10dp"
                         android:text="x2.0" />
@@ -97,7 +110,7 @@
                         android:background="@drawable/bg_r_common_stroke_primary"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:textColor="@color/text_gray"
+                        android:textColor="@color/text_foreground"
                         android:paddingVertical="4dp"
                         android:paddingHorizontal="10dp"
                         android:text="x2.5" />
@@ -109,7 +122,7 @@
                         android:background="@drawable/bg_r_common_stroke_primary"
                         android:gravity="center"
                         android:singleLine="true"
-                        android:textColor="@color/text_gray"
+                        android:textColor="@color/text_foreground"
                         android:paddingVertical="4dp"
                         android:paddingHorizontal="10dp"
                         android:text="x3.0" />
@@ -134,7 +147,7 @@
                 android:background="@drawable/bg_r_common_stroke_primary"
                 android:gravity="center"
                 android:singleLine="true"
-                android:textColor="@color/text_gray"
+                android:textColor="@color/text_foreground"
                 android:paddingVertical="4dp"
                 android:paddingHorizontal="10dp"
                 android:drawableRight="@drawable/ic_change_20"
@@ -164,7 +177,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/icon_back"
-                    app:tint="@color/text_gray"
+                    app:tint="@color/text_foreground"
                     />
                 <TextView
                     android:id="@+id/play_time_start"
@@ -174,7 +187,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     tools:text="片头" />
@@ -183,7 +196,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/icon_pre"
-                    app:tint="@color/text_gray"
+                    app:tint="@color/text_foreground"
                     />
 
                 <ImageView
@@ -191,7 +204,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/icon_back"
-                    app:tint="@color/text_gray"
+                    app:tint="@color/text_foreground"
                     android:layout_marginStart="10dp"
                     />
                 <TextView
@@ -202,7 +215,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     tools:text="片尾" />
@@ -211,7 +224,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:src="@drawable/icon_pre"
-                    app:tint="@color/text_gray"
+                    app:tint="@color/text_foreground"
                     />
 
                 <TextView
@@ -222,7 +235,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:layout_marginStart="10dp"
@@ -253,7 +266,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:drawableRight="@drawable/ic_change_20"
@@ -268,7 +281,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:drawableRight="@drawable/ic_change_20"
@@ -301,7 +314,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="横竖屏"
@@ -317,7 +330,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="字幕" />
@@ -330,7 +343,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="音轨" />
@@ -344,7 +357,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="重播" />
@@ -357,7 +370,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="刷新" />
@@ -370,7 +383,7 @@
                     android:background="@drawable/bg_r_common_stroke_primary"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:textColor="@color/text_gray"
+                    android:textColor="@color/text_foreground"
                     android:paddingVertical="4dp"
                     android:paddingHorizontal="10dp"
                     android:text="下载"

@@ -12,7 +12,6 @@ import com.github.tvbox.osc.databinding.DialogPlayingControlBinding;
 import com.github.tvbox.osc.player.MyVideoView;
 import com.github.tvbox.osc.player.controller.VodController;
 import com.github.tvbox.osc.ui.activity.DetailActivity;
-import com.lxj.xpopup.core.BottomPopupView;
 import com.lxj.xpopup.core.DrawerPopupView;
 
 import org.jetbrains.annotations.NotNull;
@@ -63,6 +62,7 @@ public class PlayingControlRightDialog extends DrawerPopupView {
         //倍速
         mBinding.speed0.setOnClickListener(view -> setSpeed(mBinding.speed0));
         mBinding.speed1.setOnClickListener(view -> setSpeed(mBinding.speed1));
+        mBinding.speed1a.setOnClickListener(view -> setSpeed(mBinding.speed1a));
         mBinding.speed2.setOnClickListener(view -> setSpeed(mBinding.speed2));
         mBinding.speed3.setOnClickListener(view -> setSpeed(mBinding.speed3));
         mBinding.speed4.setOnClickListener(view -> setSpeed(mBinding.speed4));
@@ -147,7 +147,7 @@ public class PlayingControlRightDialog extends DrawerPopupView {
                 tv.setTextColor(ColorUtils.getColor(R.color.white));
             }else {
                 tv.setBackground(getResources().getDrawable(R.drawable.bg_r_common_stroke_primary));
-                tv.setTextColor(ColorUtils.getColor(R.color.text_gray));
+                tv.setTextColor(ColorUtils.getColor(R.color.text_foreground));
             }
         }
     }
